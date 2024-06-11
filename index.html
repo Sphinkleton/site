@@ -1,0 +1,36 @@
+<html style="background-color: #000000; overflow: hidden;">
+    <title>Sphinkleton</title>
+    <img id="image" loop=none src="sphinkleton.png" style="
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;"
+    >
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script>
+      const Image = document.getElementById("image"); 
+      var clicks = 0
+      const audio1 = new Audio('boowomp.mp3');
+      const audio2 = new Audio('mweheh.mp3');
+      const audio3 = new Audio('bigexp.wav');
+      Image.addEventListener("click", () => { 
+        if (clicks < 99) {
+            if (Image.src.indexOf("sphinkleton.png")!=-1) {
+              audio1.play();
+              Image.src = "sadington.png";
+            }
+            else {
+              audio2.play();
+              Image.src = "sphinkleton.png";
+            }
+        }
+        if (clicks < 100) {
+          clicks++;
+          if (clicks >= 100) {
+            audio3.play();
+            Image.src = "explode.gif";
+          }
+        }
+      });
+   </script>
+</html>
