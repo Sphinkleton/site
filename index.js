@@ -5,23 +5,27 @@ const audio2 = new Audio('mweheh.mp3');
 const audio3 = new Audio('bigexp.wav');
 const audio4 = new Audio('flash.mp3');
 Image.addEventListener("click", () => { 
-if (clicks < 99) {
-    if (Image.src.indexOf("sphinkleton.png")!=-1) {
-        audio1.play();
-        Image.src = "sadington.png";
+    if (clicks < 99) {
+        if (Image.src.indexOf("sphinkleton.png")!=-1) {
+            audio1.stop();
+            audio1.play();
+            Image.src = "sadington.png";
+        }
+        else {
+            audio2.stop();
+            audio2.play();
+            Image.src = "sphinkleton.png";
+        }
     }
-    else {
-        audio2.play();
-        Image.src = "sphinkleton.png";
+    if (clicks < 100) {
+        clicks++;
+        if (clicks >= 100) {
+        audio1.stop();
+        audio2.stop();
+        audio3.play();
+        Image.src = "explode.gif";
+        }
     }
-}
-if (clicks < 100) {
-    clicks++;
-    if (clicks >= 100) {
-    audio3.play();
-    Image.src = "explode.gif";
-    }
-}
 });
 
 function disc(){
