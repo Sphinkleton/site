@@ -7,12 +7,14 @@ const audio4 = new Audio('flash.mp3');
 Image.addEventListener("click", () => { 
     if (clicks < 99) {
         if (Image.src.indexOf("sphinkleton.png")!=-1) {
-            audio1.stop();
+            audio1.pause();
+            audio1.currentTime = 0;
             audio1.play();
             Image.src = "sadington.png";
         }
         else {
-            audio2.stop();
+            audio2.pause();
+            audio2.currentTime = 0;
             audio2.play();
             Image.src = "sphinkleton.png";
         }
@@ -20,10 +22,12 @@ Image.addEventListener("click", () => {
     if (clicks < 100) {
         clicks++;
         if (clicks >= 100) {
-        audio1.stop();
-        audio2.stop();
-        audio3.play();
-        Image.src = "explode.gif";
+            audio1.pause();
+            audio1.currentTime = 0;
+            audio2.pause();
+            audio2.currentTime = 0;
+            audio3.play();
+            Image.src = "explode.gif";
         }
     }
 });
