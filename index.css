@@ -1,0 +1,42 @@
+html{
+    background-color: #000000; overflow: hidden;
+}
+
+#image{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+    width: 1300px;
+}
+
+#buttons{
+    position: absolute;
+    bottom:0;
+    width: 500px;
+    height: 30px;
+    left:50%;
+    transform: translate(-50%);
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#disc{
+    color: white;
+    cursor:pointer;
+}
+
+#flash{
+    color: white;
+    cursor:pointer;
+}
+
+#leav{
+    color: white;
+    cursor:pointer;
+}
+
+#bum{
+    cursor:default;
+}
