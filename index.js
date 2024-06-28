@@ -3,6 +3,7 @@ var clicks = 0
 const audio1 = new Audio('boowomp.mp3');
 const audio2 = new Audio('mweheh.mp3');
 const audio3 = new Audio('bigexp.wav');
+const audio4 = new Audio('flash.mp3');
 Image.addEventListener("click", () => { 
 if (clicks < 99) {
     if (Image.src.indexOf("sphinkleton.png")!=-1) {
@@ -32,6 +33,7 @@ function flash(){
     document.querySelector("html").style.backgroundColor = "white"
     document.getElementById("buttons").remove()
     document.getElementById("image").remove()
+    audio4.play();
 }
 
 function leav(){
