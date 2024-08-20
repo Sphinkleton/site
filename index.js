@@ -33,7 +33,7 @@ Image.addEventListener("click", () => {
 });
 
 function disc(){
-    window.location.href = "https://discord.gg/mMWJ3nJAsM"
+    window.location.href = "https://discord.gg/5fZUWVzA"
 }
 
 function flash(){
